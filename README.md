@@ -6,10 +6,21 @@ This Repo has a Main-UC branch which is updated with its most recent update and 
 
 📌 UC1: - Create First Servlet web app Covered: ⭕ Create Servlet Project using Maven ⭕ Build a web app invoked by server
 
-📌 UC2: - Create a simple Login with predefined user Covered: ⭕ Create a login form structure ⭕ Redirect after Validiation
+📌 UC2: - Create a Login Servlet with Validation
+Covered:
+✅ Created Login Servlet: A LoginServlet was created to handle user login functionality. It is mapped to /LoginServlet and uses the @WebServlet annotation with initialization parameters for the username and password.
 
-📌 UC3: - Username Validation Covered: ⭕ The username must start with a capital letter. ⭕ The username must have at least 3 characters.
+✅ Servlet Initialization Parameters: The servlet retrieves the username (KUSHAGRA) and password (Kushagra@12) from the initialization parameters set via @WebInitParam.
 
-📌 UC4: - Password Validation Covered: ⭕ Rule 1: The password must be a minimum of 8 characters long. ⭕ Rule 2: The password must contain at least one uppercase letter. ⭕ Rule 3: The password must contain at least one numeric digit. ⭕ Rule 4: The password must contain exactly one special character (e.g., !@#$%^&*).
+✅ Username and Password Validation:
+
+Username Validation: The username is validated using the regular expression ^[A-Z]{1}[a-z]{3,}$, which ensures the username starts with an uppercase letter followed by lowercase letters.
+Password Validation: The password is validated using the regular expression (?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%]).{8,20}, ensuring it includes at least one uppercase letter, one lowercase letter, one number, and one special character from @#$%, with a length between 8 to 20 characters.
+✅ Login Success: If the username and password match the initialized values and pass validation, the user is forwarded to the LoginSuccess.jsp page.
+
+✅ Error Handling: If the login fails, an error message is displayed, and the user is redirected back to the login page (login.html).
+
+
+
 
 This repository serves as a great resource for project of Java, Servlet, and TomCat in a structured manner. 🚀 Feel free to explore!
