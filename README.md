@@ -21,6 +21,4 @@ Password Validation: The password is validated using the regular expression (?=.
 ✅ Error Handling: If the login fails, an error message is displayed, and the user is redirected back to the login page (login.html).
 
 
-
-
 This repository serves as a great resource for project of Java, Servlet, and TomCat in a structured manner. 🚀 Feel free to explore!
